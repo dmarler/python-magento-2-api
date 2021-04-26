@@ -1,0 +1,10 @@
+__pycache__
+.vscode
+env
+.coverage
+cov.xml
+docker-compose.yml
+.pytest_cache
+build
+dist
+*.egg-info
