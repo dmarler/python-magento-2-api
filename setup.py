@@ -6,7 +6,7 @@ with open('README.md', 'r', encoding="utf-8") as fh:
 
 setuptools.setup(
     name='magento-2-api',
-    version='0.1.1',
+    version='0.1.2',
     author='Dalton Marler',
     author_email='daltonmarler@outlook.com',
     description='A python module for interacting with the Magento 2 REST API.',
