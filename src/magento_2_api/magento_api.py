@@ -1,13 +1,13 @@
 import requests
-
+import os
 
 class MagentoApi:
 
     rest_path = '/rest/default/V1'
 
-    def __init__(self, url, access_token):
-        self.url = url
-        self.headers = {"Authorization": "Bearer " + access_token}
+    def __init__(self, url=None, access_token=None):
+        self.url = os.environ.get('MAGENTO_REST_BASE_URL', url)
+        self.headers = {"Authorization": "Bearer " + os.environ.get('MAGENTO_REST_ACCESS_TOKEN', access_token)}
 
     def product_api(self, sku):
         """Makes a call to a Magento 2 REST API at
